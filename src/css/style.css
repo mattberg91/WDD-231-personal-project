@@ -94,13 +94,42 @@
 img {
   max-width: 100%;
 }
-
+.global-header {
+  background-color: var(--bs-black);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  fill: white;
+}
+.global-header a:link,
+.global-header a:visited {
+  color: white;
+  text-decoration: none;
+}
+.global-header__right {
+  display: flex;
+  align-items: center;
+}
+.global-header__right .search-icon {
+  padding: 0 1rem;
+  margin-top: 6px;
+}
+.global-header__right button {
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  
+}
 body {
   font-family: var(--bs-body-font-family);
   font-size: 18px;
   margin: 0;
 }
-
+.icon {
+  width: 24px;
+  height: 24px;
+}
 a:link,
 a:visited {
   color: var(--bs-link-color);
@@ -137,7 +166,7 @@ a:hover {
   display: flex;
   align-items: center;
 }
-.site-title > span {
+.site-title > h1 {
   font-size: 1rem;
   margin-left: 0.3em;
 }
