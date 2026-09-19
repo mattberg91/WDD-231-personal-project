@@ -116,10 +116,14 @@ img {
   margin-top: 6px;
 }
 .global-header__right button {
+  display:flex;
   color: white;
   background-color: transparent;
-  text-align: center;
-  
+  align-items: center;
+  border: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  border-left: 2px solid var(--bs-grey-5);
 }
 body {
   font-family: var(--bs-body-font-family);
