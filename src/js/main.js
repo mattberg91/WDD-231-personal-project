@@ -5,7 +5,7 @@ const parkData = getParkData();
 
 const disclaimer = document.querySelector(".disclaimer > a");
 disclaimer.href = parkData.url;
-disclaimer.innerHTML = parkData.DatefullName;
+disclaimer.innerHTML = parkData.fullName;
 
 
 
@@ -18,6 +18,8 @@ function parkInfoTemplate(info) {
     </p>`;
 }
 
+const heroContent = document.querySelector(".hero-banner__content");
+heroContent.innerHTML = parkInfoTemplate(parkData);
 
 
 
