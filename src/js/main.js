@@ -21,10 +21,11 @@ function parkInfoTemplate(info) {
 const heroContent = document.querySelector(".hero-banner__content");
 heroContent.innerHTML = parkInfoTemplate(parkData);
 
+const heroImage = document.querySelector(".hero-banner > img ");
+heroImage.src = parkData.images[0].url;
 
 
-
-
+document.title = parkData.fullName;
 
 
 
