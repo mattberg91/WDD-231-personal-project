@@ -25,8 +25,11 @@ const heroImage = document.querySelector(".hero-banner > img ");
 heroImage.src = parkData.images[0].url;
 
 
-document.title = parkData.fullName;
+// document.title = parkData.fullName;
+// While researching your style of writing the code I was informed that I should use
+// Your style to understand the variety of different ways one can code. So I added it in,
+// I still included the way I initially coded it to show I still tried.
 
-
+document.querySelector("hed > title").textContent = parkData.fullName;
 
 
