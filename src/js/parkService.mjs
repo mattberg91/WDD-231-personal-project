@@ -81,28 +81,28 @@ const park = {
       altText:
         "A crowd of people standing along a wooden boardwalk watches a geyser erupt.",
       caption: "Aurum Geyser erupting",
-      url: "https://www.nps.gov/common/uploads/structured_data/3C7D2FBB-1DD8-B71B-0BED99731011CFCE.jpg"
+      url: "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/619AB9C3-DA87-B968-87C2256D544EBE26.jpg?width=423&quality=80&mode=crop&format=webp"
     },
     {
       credit: "NPS/Diane Renkin",
       title: "Black Pool",
       altText: "A visitor stands on a boardwalk near a hot spring and a lake.",
       caption: "Black Pool at the West Thumb Geyser Basin",
-      url: "https://www.nps.gov/common/uploads/structured_data/3C7D383B-1DD8-B71B-0BEC4A4D6BDF7CAD.jpg"
+      url: "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/619AB9C3-DA87-B968-87C2256D544EBE26.jpg?width=423&quality=80&mode=crop&format=webp"
     },
     {
       credit: "NPS/Jim Peaco",
       title: "Beehive Geyser",
       altText: "People on a wooden boardwalk watch a geyser erupt.",
       caption: "Visitors to the Upper Geyser Basin watch Beehive Geyser erupt.",
-      url: "https://www.nps.gov/common/uploads/structured_data/3C7D334F-1DD8-B71B-0B108C7771F4E854.jpg"
+      url: "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/42892E15-AE6A-81EC-D35112D59E39F99C.jpg?width=423&quality=80&mode=crop&format=webp"
     },
     {
       credit: "NPS/Jim Peaco",
       title: "Wolf howling",
       altText: "A wolf howls while standing on a snowy field.",
       caption: "Alpha male of the Canyon wolf pack",
-      url: "https://www.nps.gov/common/uploads/structured_data/3C7D3BD3-1DD8-B71B-0BB607F9BAAE1271.jpg"
+      url: "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/610D997A-D1EE-EE2E-B08F7C9E789EEDB3.jpg?width=423&quality=80&mode=crop&format=webp"
     },
     {
       credit: "NPS/Jim Peaco",
@@ -141,7 +141,7 @@ const park = {
       title: "Bighorn sheep",
       altText: "Two bighorn sheep laying on the ground.",
       caption: "Two bighorn rams rest and chew their cud",
-      url: "https://www.nps.gov/common/uploads/structured_data/3C7D95DD-1DD8-B71B-0BC4FA19BD72F0EC.jpg"
+      url: "https://www.nps.gov/common/uploads/grid_builder/yell/crop16_9/610D997A-D1EE-EE2E-B08F7C9E789EEDB3.jpg?width=423&quality=80&mode=crop&format=webp"
     },
     {
       credit: "NPS/Diane Renkin",
