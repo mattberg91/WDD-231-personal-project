@@ -261,7 +261,52 @@ a:hover {
   padding: 0.8em 2em;
 
 }
-
 .park-nav a:hover{
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+/* Intro and Info styles */
+.intro {
+  padding: 1.5rem;
+}
+.intro > h1 {
+  font-family: var(--bs-font-serif);
+  font-size: 2rem;
+  font-weight: normal;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.5rem;
+}
+
+.info > * {
+  flex: 1;
+}
+/* Footer styles */
+
+
+
+
+
+
+@media screen and (min-width: 630px) {
+  .info{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
