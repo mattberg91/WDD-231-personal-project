@@ -1,11 +1,11 @@
 import { getParkData } from "./parkService.mjs";
+// import setHeaderfooter from "./setHeaderFooter.mjs";
+// import { mediaCardTemplate } from "./templates.mjs";
+
 
 const parkData = getParkData();
 
 
-const disclaimer = document.querySelector(".disclaimer > a");
-disclaimer.href = parkData.url;
-disclaimer.innerHTML = parkData.fullName;
 
 
 
@@ -17,22 +17,6 @@ function parkInfoTemplate(info) {
         <span>${info.states}</span>
     </p>`;
 }
-
-const heroContent = document.querySelector(".hero-banner__content");
-heroContent.innerHTML = parkInfoTemplate(parkData);
-
-const heroImage = document.querySelector(".hero-banner > img ");
-heroImage.src = parkData.images[0].url;
-
-
-// document.title = parkData.fullName;
-// While researching your style of writing the code I was informed that I should use
-// Your style to understand the variety of different ways one can code. So I added it in,
-// I still included the way I initially coded it to show I still tried.
-
-document.querySelector("hed > title").textContent = parkData.fullName;
-
-
 function setHeaderInfo(data) {
   // insert data into disclaimer section
   const disclaimer = document.querySelector(".disclaimer > a");
@@ -45,3 +29,64 @@ function setHeaderInfo(data) {
   // use the template function above to set the rest of the park specific info in the header
   document.querySelector(".hero-banner__content").innerHTML =
     parkInfoTemplate(data);
+}
+
+
+// document.title = parkData.fullName;
+// While researching your style of writing the code I was informed that I should use
+// Your style to understand the variety of different ways one can code. So I added it in,
+// I still included the way I initially coded it to show I still tried.
+function setParkIntro(data) {
+    document.querySelector(".intro").innerHTML = `
+    <h2>${data.fullName}</h2>
+    <p>${data.description}</p>
+    `;
+
+
+}
+
+
+const parkInfoLinks = [
+  {
+    name: "Current Conditions &#x203A;",
+    link: "conditions.html",
+    image: parkData.images[2].url,
+    description:
+      "See what conditions to expect in the park before leaving on your trip!"
+  },
+  {
+    name: "Fees and Passes &#x203A;",
+    link: "fees.html",
+    image: parkData.images[3].url,
+    description: "Learn about the fees and passes that are available."
+  },
+  {
+    name: "Visitor Centers &#x203A;",
+    link: "visitor_centers.html",
+    image: parkData.images[9].url,
+    description: "Learn about the visitor centers in the park."
+  }
+];
+
+
+
+
+function mediaCardTemplate(info) {
+    document.querySelector(".info").innerHTML = `
+    <a href="${info.link}">
+        <image src="${info.image}" alt="${info.alt} class="media-card-img"
+    </a>
+    <h2>
+        <a href="${info.}
+    
+    
+    
+    
+    
+    `
+}
+
+
+setmediaCardTemplate(parkData);
+setParkIntro(parkData);
+setHeaderInfo(parkData);
