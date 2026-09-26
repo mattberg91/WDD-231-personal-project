@@ -118,11 +118,11 @@ function footerTemplate(info) {
   <p>${voice}</p>
   </section>`;
 }
-function setFooter(data) {
+function setParkFooter(data) {
     document.querySelector("#park-footer").innerHTML = footerTemplate(data);
 }
 
-setFooter(parkData);
+setParkFooter(parkData);
 setParkInfo(parkData);
 setParkIntro(parkData);
 setHeaderInfo(parkData);
