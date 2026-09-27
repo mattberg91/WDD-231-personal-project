@@ -9,33 +9,26 @@ export function parkInfoTemplate(info) {
 }
 
 export function mediaCardTemplate(info) {
-    return `
+    return `<div class=media-card">
     <a href="${info.link}">
         <img src="${info.image}" alt="${info.name}" class="media-card-img">
         <h2 class="media-card-title">${info.name}</h2>
     </a>
 
     <p>${info.description}</p>
-    
-
-`;}
-
-export function setParkInfo(data) {
-    const cards = parkInfoLinks.map(function(info) {
-        return mediaCardTemplate(info);
-        });
-    document.querySelector(".info").innerHTML = cards.join("");
+    </div>`;
 }
 
 
-export function getMailingAddress(addresses) {
+
+    function getMailingAddress(addresses) {
     const mailing = addresses.find(function(address) {
     return address.type === "Mailing";
     });
     return mailing;
 }
 
-export function getVoicePhone(phoneNumbers) {
+    function getVoicePhone(phoneNumbers) {
     const voice = phoneNumbers.find(function(phoneNumber) {
         return phoneNumber.type ==="Voice"
     });
