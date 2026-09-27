@@ -1,18 +1,9 @@
 
-
-import {getParkData} from "./parkService.mjs";
-
+import { parkInfoTemplate, footerTemplate } from "./templates.mjs";
 
 
 
-
-
-
-
-
-
-
-function setHeaderInfo(data) {
+export function setHeaderInfo(data) {
   // insert data into disclaimer section
   const disclaimer = document.querySelector(".disclaimer > a");
   disclaimer.href = data.url;
@@ -24,11 +15,20 @@ function setHeaderInfo(data) {
   // use the template function above to set the rest of the park specific info in the header
   document.querySelector(".hero-banner__content").innerHTML =
     parkInfoTemplate(data);
+}
 
 
+// document.title = parkData.fullName;
+// While researching your style of writing the code I was informed that I should use
+// Your style to understand the variety of different ways one can code. So I added it in,
+// I still included the way I initially coded it to show I still tried.
 
 
   // set the footer info
+  function setFooter(data) {
+    const footerEL = document
+  }
 
-
-
+export function setParkFooter(data) {
+    document.querySelector("#park-footer").innerHTML = footerTemplate(data);
+}
