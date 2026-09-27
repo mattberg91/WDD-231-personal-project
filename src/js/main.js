@@ -18,12 +18,12 @@ function setParkInfoLinks(data) {
     const infoEl = document.querySelector(".info");
     const html = data.map(mediaCardTemplate);
 
-    infoEl.instertAdjacentHTML("afterbegin", html.join(""));
+    infoEl.insertAdjacentHTML("afterbegin", html.join(""));
 }
 
 
 
 setHeaderFooter(parkData);
-setParkInfoLinks(parkData);
+setParkInfoLinks(parkInfoLinks);
 setParkIntro(parkData);
 
