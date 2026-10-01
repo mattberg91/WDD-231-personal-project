@@ -33,4 +33,17 @@ getPokemon(url);
 console.log("second: ", results);
 
 
+function doStuff(data) {
+    const outputElement = document.querySelector("#output");
+    results = data;
+    const html = `<h2 class="pokemon-name">${results.name}</h2>
+                    <img src="${results.sprites.front_default}" alt="${results.name} class="pokemon-image">`;
+    outputElement.innerHTML = html;
+    console.log("first: ", results);
+
+}
+
+
+
+
  
