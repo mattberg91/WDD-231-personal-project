@@ -200,7 +200,44 @@ export const parkInfoLinks = [
     description: "Learn about the visitor centers in the park."
   }
 ];
+  const baseUrl = "https://developer.nps.gov/api/v1/alerts?parkCode=yell&limit=10";
+  const apiKey = import.meta.env.VITE_NPS_API_KEY;
+  const resourcePath = "parks";
 
-export function getParkData() {
-  return park;
+  export async function getParkData() {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-Api-Key": apiKey
+      }
+    };
+      let data = {};
+    const response = await fetch(baseUrl + "parks" + "?parkCode=yell", options);
+
+    if (response.ok) {
+      data = await response.json();
+
+  } else throw new Error("response not ok")
+  return data.data[0];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// export function getParkData() {
+
+//   return park;
+// }
