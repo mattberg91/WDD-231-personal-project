@@ -29,9 +29,7 @@ export function mediaCardTemplate(info) {
 }
 
     function getVoicePhone(phoneNumbers) {
-    const voice = phoneNumbers.find(function(phoneNumber) {
-        return phoneNumber.type ==="Voice"
-    });
+        const voice = phoneNumbers.find((number) => number.type === "Voice")
     return voice.phoneNumber;
 
 }
