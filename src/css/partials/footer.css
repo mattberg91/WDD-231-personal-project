@@ -1,0 +1,26 @@
+/* Footer styles */
+
+
+.park-footer {
+  background-image: url("../images/topo_pattern.png");
+  padding: 1.5rem;
+}
+
+.park-footer h3 {
+  font-family: var(--bs-font-serif);
+  font-size: 1em;
+  margin-top: 0.5rem;
+}
+
+.park-footer h4 {
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+
+}
+
+.park-footer p {
+  font-size: 0.8em;
+  line-height: 1.4;
+  color: var(--bs-grey-2);
+  margin-top: 0.5rem;
+}
