@@ -246,14 +246,6 @@ export function getInfoLinks(data) {
 }
 
 
-
-
-
-
-
-
-
-
 // export function getParkData() {
 
 //   return park;
