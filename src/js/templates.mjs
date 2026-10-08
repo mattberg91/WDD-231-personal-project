@@ -19,8 +19,6 @@ export function mediaCardTemplate(info) {
     </div>`;
 }
 
-
-
     function getMailingAddress(addresses) {
     const mailing = addresses.find(function(address) {
     return address.type === "Mailing";
@@ -47,8 +45,4 @@ export function footerTemplate(info) {
   <p>${voice}</p>
   </section>`;
 }
-
-
-
-
 
