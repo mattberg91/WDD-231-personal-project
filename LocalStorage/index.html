@@ -38,8 +38,9 @@
     <header>
         <h1>ToDos</h1>
           <div>
-            <input id="userName" placeholder="Enter your name" />
-            <button id="saveUser">Save Name</button>
+            <label for="userName">User Name</label>
+            <input type="text" id="userName" placeholder="Enter your name" />
+            <button type="button" id="saveUser">Save Name</button>
           </div>
         <p class="user">[user name here]</p>
     </header>
@@ -47,7 +48,7 @@
     <section>
       <label for="todo">Enter Task</label>
       <input name="todo" id="todo" />
-      <button id="submitTask">Enter</button>
+      <button type="submit" id="submitTask">Enter</button>
     </section>
     <ul id="todoList" class="todos"></ul>
     </main>

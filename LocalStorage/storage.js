@@ -1,6 +1,19 @@
 // storage.js
 let tasks = [];
 
+function  setLocalStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}
+
+function getLocalStorage(key) {
+  const storedValue = localStorage.getItem(key);
+
+  if (storedValue) {
+    return JSON.parse(storedValue);
+  }
+  return[];
+}
+
 function taskTemplate(task) {
   return `
     <li ${task.completed ? 'class="strike"' : ""}>
@@ -20,6 +33,7 @@ function renderTasks(tasks) {
   const html = tasks.map(taskTemplate).join("");
   listElement.innerHTML = html;
 }
+
 
 function newTask() {
   // get the value entered into the #todo input
@@ -60,9 +74,76 @@ function manageTasks(e) {
   }
 }
 
+function saveUser() {
+  // 1. Get the name from the input.
+  const name = document.querySelector("#userName").value;
+  // 2. Save the name in localStorage
+  // using the key "todo-user".
+  localStorage.setItem("todo-user", name);
+  // 3. Display the name in the paragraph
+  // with the class "user".
+  document.querySelector(".user").textContent = name;
+}
+
+function setUser() {
+  const name = localStorage.getItem("todo-user");
+  if (name) {
+    document.querySelector(".user").textContent = name;
+  }
+}
+
 // Add your event listeners here
+document.querySelector("#saveUser").addEventListener("click", saveUser);
 document.querySelector("#submitTask").addEventListener("click", newTask);
 document.querySelector("#todoList").addEventListener("click", manageTasks);
 
+setUser();
 // render  the initial list of tasks (if any) when the page loads
 renderTasks(tasks);
+
+
+
+
+
+
+
+
+
+
+// function setUserName() {
+//   const name = localStorage.getItem("todo-user");
+//   if (name) {
+//     document.querySelector(".user").innerText = name;
+//   }
+// }
+// function userNameHandler() {
+//   const name = document.querySelector("#user").value;
+//   localStorage.setItem("todo-user", name);
+//   setUserName();
+// }
+
+// document
+//   .querySelector("#userNameButton")
+//   .addEventListener("click", userNameHandler);
+
+//   // check to see if a user name has been set...if yes then set it in the header
+// setUserName();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
