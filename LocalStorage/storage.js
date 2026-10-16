@@ -40,6 +40,7 @@ function newTask() {
   const task = document.querySelector("#todo").value;
   // add it to our arrays tasks
   tasks.push({ detail: task, completed: false });
+  setLocalStorage('tasks', tasks);
   // render out the list
   renderTasks(tasks);
 }
