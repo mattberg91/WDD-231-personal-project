@@ -43,6 +43,7 @@ function newTask() {
   setLocalStorage('tasks', tasks);
   // render out the list
   renderTasks(tasks);
+;
 }
 
 function removeTask(taskElement) {
@@ -52,6 +53,8 @@ function removeTask(taskElement) {
     (task) => task.detail != taskElement.querySelector('p').innerText
   );
   taskElement.remove();
+  setLocalStorage("tasks", tasks);
+
 }
 
 function completeTask(taskElement) {
@@ -61,6 +64,7 @@ function completeTask(taskElement) {
   tasks[taskIndex].completed = tasks[taskIndex].completed ? false : true;
   taskElement.classList.toggle("strike");
   console.log(tasks);
+  setLocalStorage("tasks", tasks);
 }
 
 function manageTasks(e) {
@@ -93,17 +97,23 @@ function setUser() {
   }
 }
 
+function init() {
+
+  tasks = getLocalStorage("tasks");
+
+  renderTasks(tasks);
+  setUser();
+}
+
 // Add your event listeners here
 document.querySelector("#saveUser").addEventListener("click", saveUser);
 document.querySelector("#submitTask").addEventListener("click", newTask);
 document.querySelector("#todoList").addEventListener("click", manageTasks);
 
-setUser();
-// render  the initial list of tasks (if any) when the page loads
-renderTasks(tasks);
-
-
-
+// setUser();
+// // render  the initial list of tasks (if any) when the page loads
+// renderTasks(tasks);
+init ();
 
 
 
