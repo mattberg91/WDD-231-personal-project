@@ -1,4 +1,4 @@
-
+import spritePath from "../images/sprite.symbol.svg";
 
 export function parkInfoTemplate(info) {
     return `<a href="/" class="hero-banner__title">${info.name}</a>
@@ -32,6 +32,8 @@ export function mediaCardTemplate(info) {
 
 }
 
+
+
 export function footerTemplate(info) {
   const mailing = getMailingAddress(info.addresses);
   const voice = getVoicePhone(info.contacts.phoneNumbers)
@@ -45,4 +47,33 @@ export function footerTemplate(info) {
   <p>${voice}</p>
   </section>`;
 }
+
+
+
+
+
+
+    function alertTemplate(alert) {
+        let alertType = "";
+        switch (alert.category) {
+            case "Park Closure":
+                alertType = "closure";
+                break;
+                default:
+                    alertType = alert.category.toLowerCase();
+        }
+        return `
+            <li class="alert">
+                <svg class="icon" focusable="false" aria-hidden="true">
+                <use xlink:href="${spritePath}#alert-${alertType}"></use>
+                </svg>
+                <div>
+                    <h3>${alert.title}</h3>
+                    <p>${alert.description}</p>
+                </div>
+            </li>
+        `;
+    }
+
+
 
