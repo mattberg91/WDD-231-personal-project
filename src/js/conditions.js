@@ -8,26 +8,34 @@ import {activityListTemplate, alertTemplate, visitorCenterTemplate } from "./tem
 
 
 function setAlerts(alerts) {
-    const alertsList = document.querySlector("#alerts-list");
-    alertsList.innerHTML = html;
+    const alertsList = document.querySelector("#alerts-list");
+    alertsContainer.innerHTML = "";
+
     const html = alerts.map(alertTemplate);
     alertsContainer.insertAdjacentHTML("afterbegin", html.join(""));
 }
 
 function setVisitorCenters(centers) {
-    const centersContainer = codument.querySlector("visitor ul");
+    const centersContainer = document.querySelector("#visitor-center-list ul");
     const html = centers.map(visitorCenterTemplate);
     centersContainer.insertAdjacentHTML("afterbegin", html);
 }
 
-
+function setActivities(activities) {
+    const activitiesContainer = document.querySelector("#activities-list ul");
+    const html = activityListTemplate(activities);
+    activitiesContainer.insertAdjacentHTML("afterbegin", html);
+}
 
 
 async function init() {
     const parkData = await getParkData();
     const alerts = await getParkAlerts(parkData.parkCode);
+    const visitorCenters = await getParkVisitorCenters(parkData.parkCode);
     setHeaderFooter(parkData);
     setAlerts(alerts);
+    setVisitorCenters(visitorCenters);
+    setActivities(parkData.activities);
 } 
 
 

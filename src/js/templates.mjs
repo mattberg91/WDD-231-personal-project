@@ -9,7 +9,7 @@ export function parkInfoTemplate(info) {
 }
 
 export function mediaCardTemplate(info) {
-    return `<div class=media-card">
+    return `<div class="media-card">
     <a href="${info.link}">
         <img src="${info.image}" alt="${info.name}" class="media-card-img">
         <h2 class="media-card-title">${info.name}</h2>
@@ -41,7 +41,7 @@ export function footerTemplate(info) {
   return `<section class="contact">
   <h3>Contact Info</h3>
   <h4>Mailing Address:</h4>
-  <div><p>${mailing.line1}<p>
+  <div><p>${mailing.line1}</p>
   <p>${mailing.city}, ${mailing.stateCode} ${mailing.postalCode}</p></div>
   <h4>Phone:</h4>
   <p>${voice}</p>
@@ -84,7 +84,7 @@ export function visitorCenterTemplate(center) {
 
 
 export function activityListTemplate(activities) {
-    return activities.map((activity) => `<li${activity.name} </li>`).join("");
+    return activities.map((activity) => `<li>${activity.name} </li>`).join("");
 }
 
 
