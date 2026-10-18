@@ -16,13 +16,13 @@ function setAlerts(alerts) {
 }
 
 function setVisitorCenters(centers) {
-    const centersContainer = document.querySelector("#visitor-center-list ul");
+    const centersContainer = document.querySelector("#visitor-centers-list");
     const html = centers.map(visitorCenterTemplate);
     centersContainer.insertAdjacentHTML("afterbegin", html);
 }
 
 function setActivities(activities) {
-    const activitiesContainer = document.querySelector("#activities-list ul");
+    const activitiesContainer = document.querySelector("#activities-list");
     const html = activityListTemplate(activities);
     activitiesContainer.insertAdjacentHTML("afterbegin", html);
 }
