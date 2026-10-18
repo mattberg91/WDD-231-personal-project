@@ -9,10 +9,10 @@ import {activityListTemplate, alertTemplate, visitorCenterTemplate } from "./tem
 
 function setAlerts(alerts) {
     const alertsList = document.querySelector("#alerts-list");
-    alertsContainer.innerHTML = "";
+    alertsList.innerHTML = "";
 
     const html = alerts.map(alertTemplate);
-    alertsContainer.insertAdjacentHTML("afterbegin", html.join(""));
+    alertsList.insertAdjacentHTML("afterbegin", html.join(""));
 }
 
 function setVisitorCenters(centers) {
