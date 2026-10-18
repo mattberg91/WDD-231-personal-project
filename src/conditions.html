@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>[Park Name]</title>
-    <link rel="stylesheet" href="css/conditions.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/conditions.js"></script>
   </head>
   <body>
@@ -143,29 +143,27 @@
         </nav>    
       </section>
     </header>
-    <main id="main"></main>
-    <h1>Current Conditions</h1>
-      <section class="Alerts">
-        <h2>Alerts</h2>
-        <ul>
-        </ul>
-      </section>
-      <section class="Visitor-Services">
-        <h2>Visitor Services</h2>
-        <details>
-          <summary>Visitor Centers</summary>
-          <ul>
-          </ul>
-        </details>
-      </section>
-      <section class="Activities">
-        <h2>Activities</h2>
-        <details name="current-details">
-          <summary>Current Activities</summary>
-          <ul>
-          </ul>
-        </details>
-      </section>
+    <main id="main">
+      <h1>Current Conditions</h1>
+        <section class="Alerts">
+          <h2>Alerts</h2>
+          <ul id="alerts-list"></ul>
+        </section>
+        <section class="Visitor-Services">
+          <h2>Visitor Services</h2>
+          <details>
+            <summary>Visitor Centers</summary>
+            <ul id="visitor-centers-list"></ul>
+          </details>
+        </section>
+        <section class="Activities">
+          <h2>Activities</h2>
+          <details name="current-details">
+            <summary>Current Activities</summary>
+            <ul id="activities-list"></ul>
+          </details>
+        </section>
+      </main>
     <footer id="park-footer" class="park-footer"></footer>
   </body>
 </html>

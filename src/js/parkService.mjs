@@ -245,7 +245,19 @@ export function getInfoLinks(data) {
   return parkData.data[0];
 }
 
+export async function getParkAlerts(code) {
+  const parkData = await getJson(`alerts?parkCode=${code}`);
+  return parkData.data
+}
 
+
+
+
+
+export async function getParkVisitorCenter(code) {
+  const parkAlerts = await getJson(`alerts?parkCode=${code}`);
+  return parkData.data
+}
 // export function getParkData() {
 
 //   return park;
