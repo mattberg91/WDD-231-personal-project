@@ -53,7 +53,7 @@ export function footerTemplate(info) {
 
 
 
-    function alertTemplate(alert) {
+    export function alertTemplate(alert) {
         let alertType = "";
         switch (alert.category) {
             case "Park Closure":
@@ -73,5 +73,18 @@ export function footerTemplate(info) {
         `;
     }
 
+export function visitorCenterTemplate(center) {
+    return `
+        <li class="visitor-center">
+        <h4>${center.name}</h4>
+        <p>${center.description}</p>
+        <p>${center.directionsInfo}</p>
+        </li>`;
+        }
+
+
+export function activityListTemplate(activities) {
+    return activities.map((activity) => `<li${activity.name} </li>`).join("");
+}
 
 
