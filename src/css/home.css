@@ -8,7 +8,8 @@
 .intro {
   padding: 1.5rem;
 }
-.intro > h1 {
+.intro > h1,
+main > h1 {
   font-family: var(--bs-font-serif);
   font-size: 2rem;
   font-weight: normal;
