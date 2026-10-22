@@ -37,7 +37,14 @@ p, li {
     max-width: 70ch;
 }
 
+ul, ol {
+    margin: 0;
+    padding: 0 20px;
+}
 
+li {
+    margin-bottom: 10px;
+}
 
 img {
     max-width: 100%;
@@ -45,8 +52,17 @@ img {
     margin: 10px auto;
 }
 
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
 
+figcaption {
+    margin-top: 5px;
+    font-style: italic;
+    color:black;
 
+}
 
 
 
