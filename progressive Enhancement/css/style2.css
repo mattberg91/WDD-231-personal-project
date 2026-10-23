@@ -18,6 +18,12 @@ header {
 main {
     padding: 15px;
     margin: 0 auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 20px;
 }
 
 h1 {
