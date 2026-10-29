@@ -25,6 +25,7 @@
   height: 100px;
   background-color: gold;
   border-radius: 0 0 50% 50%;
+  animation: rock 2s infinite;
 }
 
 .green {
@@ -36,5 +37,35 @@
 .blue {
   width: 100px;
   height: 100px;
+  height: 0;
+  opacity: 0;
+  transition: all 2s;
   background-color: blue;
 }
+.show {
+  height: 100px;
+  opacity: 1;
+}
+/* .green:hover~ .blue {
+  height: 100px;
+  opacity: 1;
+} */
+
+@keyframes rock {
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-90deg);
+  }
+}
+
+
+
+
+
+
+
