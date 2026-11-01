@@ -35,7 +35,7 @@ function enableNavigation() {
   // use a querySelector to get the menu buttons
     const menuButton =document.querySelector("#global-nav-toggle");
   // when the main menu button is clicked:
-    const globalNav = document.querySelector(".global-nav");
+    const globalNav = document.querySelector(".global-nav__split-button__toggle");
   menuButton.addEventListener("click", (ev) => {
     let target = ev.target;
     // toggle the show class on the global-nav
@@ -54,7 +54,7 @@ function enableNavigation() {
       // if we opened it then set the aria-expanded attribute on the button to true
        
       // if we closed it then set the aria-expanded attribute on the button to false
-      
+    console.log("toggle");  
   });
 }
 
