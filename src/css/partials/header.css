@@ -27,13 +27,25 @@
   border-top: 1px solid #333;
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.global-nav button {
+  background-color: transparent;
+  border: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.global-nav svg {
+  --icon-color: white;
 }
 
 .global-nav.show {
-  max-height: 500px;
+  max-height: 10000px;
 }
 
-.global-nav__toggle--close {
+.global-nav__toggle--closed {
   display: flex;
   align-items: center;
 }
