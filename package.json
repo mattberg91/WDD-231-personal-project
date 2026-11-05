@@ -8,8 +8,9 @@
     "start": "vite",
     "build": "vite build --emptyOutDir",
     "preview": "vite preview",
-    "lint": "eslint *.js src/**/*.js",
-    "lint-fix": "eslint *.js src/**/*.js --fix"
+    "lint": "eslint *.js src/**/*.js \"**/*.css\"",
+    "lint-fix": "eslint *.js src/**/*.js \"**/*.css\" --fix",
+    "lint:css": "eslint \"**/*.css\""
   },
   "keywords": [],
   "author": "",
@@ -17,12 +18,14 @@
   "dependencies": {
     "vite": "^6.2.3"
   },
+
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.14.0",
-    "globals": "^17.13.0",
+    "globals": "^17.14.0",
     "stylelint": "^17.16.0",
     "stylelint-config-standard": "^40.0.0",
-    "typescript-eslint": "^8.72.1"
+    "typescript-eslint": "^8.72.1",
+    "@eslint/css": "^2.0.1"
   }
 }
