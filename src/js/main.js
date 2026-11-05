@@ -60,9 +60,5 @@ function enableNavigation() {
 
 
 
-
-
-
-
 init();
 enableNavigation();
