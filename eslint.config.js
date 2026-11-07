@@ -5,6 +5,9 @@ import { defineConfig } from "eslint/config";
 
 export default defineConfig([
   {
+    ignores: ["dist/**"],
+  },
+  {
     files: ["**/*.{js,mjs,cjs}"],
     plugins: { js },
     extends: ["js/recommended"],
@@ -15,6 +18,8 @@ export default defineConfig([
     language: "css/css",
     plugins: { css },
     extends: ["css/recommended"],
+    rules: {
+      "css/no-invalid-properties": ["error", { allowUnknownVariables: true }],
+    },
   },
 ]);
-
