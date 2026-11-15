@@ -12,7 +12,7 @@ export function mediaCardTemplate(info) {
     return `<div class="media-card">
     <a href="${info.link}">
         <img src="${info.image}" alt="${info.name}" class="media-card-img">
-        <h2 class="media-card-title">${info.name}</h2>
+        <h3 class="media-card-title">${info.name}</h3>
     </a>
 
     <p>${info.description}</p>
@@ -20,9 +20,7 @@ export function mediaCardTemplate(info) {
 }
 
     function getMailingAddress(addresses) {
-    const mailing = addresses.find(function(address) {
-    return address.type === "Mailing";
-    });
+    const mailing = addresses.find((address) => address.type === "Mailing");
     return mailing;
 }
 
@@ -32,26 +30,19 @@ export function mediaCardTemplate(info) {
 
 }
 
-
-
 export function footerTemplate(info) {
   const mailing = getMailingAddress(info.addresses);
   const voice = getVoicePhone(info.contacts.phoneNumbers)
   
   return `<section class="contact">
-  <h3>Contact Info</h3>
-  <h4>Mailing Address:</h4>
-  <div><p>${mailing.line1}</p>
-  <p>${mailing.city}, ${mailing.stateCode} ${mailing.postalCode}</p></div>
-  <h4>Phone:</h4>
-  <p>${voice}</p>
+    <h3>Contact Info</h3>
+    <h4>Mailing Address:</h4>
+    <div><p>${mailing.line1}</p>
+    <p>${mailing.city}, ${mailing.stateCode} ${mailing.postalCode}</p></div>
+    <h4>Phone:</h4>
+    <p>${voice}</p>
   </section>`;
 }
-
-
-
-
-
 
     export function alertTemplate(alert) {
         let alertType = "";
@@ -60,19 +51,19 @@ export function footerTemplate(info) {
                 alertType = "closure";
                 break;
                 default:
-                    alertType = alert.category.toLowerCase();
+                alertType = alert.category.toLowerCase();
         }
         return `
             <li class="alert">
                 <svg class="icon" focusable="false" aria-hidden="true">
-                <use xlink:href="/images/sprite.symbol.svg#ICON_ID_HERE"></use></svg>
+                    <use xlink:href="${spritePath}#alert-${alertType}"></use>
+                </svg>
                 <div>
-                    <h3>${alert.title}</h3>
+                    <h3 class="alert-${alertType}">${alert.title}</h3>
                     <p>${alert.description}</p>
                 </div>
-            </li>
-        `;
-    }
+            </li>`;
+        }
 
 export function visitorCenterTemplate(center) {
     return `

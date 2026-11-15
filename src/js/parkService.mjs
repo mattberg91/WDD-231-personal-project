@@ -249,7 +249,6 @@ export function getInfoLinks(data) {
 
   //   if (response.ok) {
   //     data = await response.json();
-    console.log("Park data:", parkData);
   // } else throw new Error("response not ok")
   return parkData.data[0];
 }
